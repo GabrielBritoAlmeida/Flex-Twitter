@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Evita alterar a largura com novo elemento */
+}
+
+body {
+  background: #e6ecf0;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  /* Font fica menos pixada */
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+/*-------------------------------------------------------------- */
+
+.content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/*-------------------------------------------------------------- */
+
+/* Header */
+
+header#main-header {
+  height: 46px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative; /* Evita do banner sobrepor o box-shadow*/
+  z-index: 1;
+}
+
+header#main-header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header#main-header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header#main-header nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #667580;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+/* Remove a margem do 1º item da lista */
+header#main-header nav ul li:first-child {
+  margin: 0;
+}
+
+header#main-header nav ul li img {
+  margin-right: 7px;
+}
+
+header#main-header div.side {
+  display: flex;
+}
+
+header#main-header img.logo_twitter {
+  margin: 0 5px;
+}
+
+header#main-header div.side input {
+  width: 220px;
+  height: 34px;
+  border: 1px solid #e6ecf0;
+  padding: 0 30px 0 16px;
+  border-radius: 16px;
+  color: #667581;
+  font-size: 12px;
+  background: #f5f8fa url("/images/search.svg") no-repeat 190px center;
+}
+
+header#main-header div.side img {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+
+  margin: 0 15px;
+}
+
+header#main-header div.side button {
+  height: 34px;
+  background: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+
+  color: #fff;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* FIM - Header */
+
+/*-------------------------------------------------------------- */
+
+/* Banner */
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+}
+
+/* Fim - Banner */
+
+/*-------------------------------------------------------------- */
+
+/* Bar */
+
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 285px;
+  height: 100%;
+}
+
+div.bar .content ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+div.bar .content ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* flex-direction: column; - Alinhamento vertical */
+  align-items: center; /* flex-direction: column; - Alinhamento horizontal */
+  padding: 0 15px;
+  position: relative;
+}
+
+div.bar .content ul li:hover ::after {
+  /* After adiciona um elemento antes de fechar */
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
+}
+
+div.bar .content ul li:hover strong {
+  color: #3bb9e3;
+}
+
+div.bar .content ul li span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+div.bar .content ul li strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+div.bar .content .actions {
+  display: flex;
+}
+
+/* Button */
+div.bar .content .actions button {
+  height: 34px;
+  background: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+
+  margin-right: 20px;
+}
+/* Fim- Button */
+
+/* Fim - Bar*/
+
+/*-------------------------------------------------------------- */
+
+/* Wapper-Content */
+
+div.wapper-content {
+  display: flex;
+}
+
+div.wapper-content aside.profile {
+  width: 260px;
+}
+
+div.wapper-content aside.profile img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -130px;
+}
+
+div.wapper-content aside.profile h1 {
+  font-size: 21px;
+  color: #1f2226;
+  margin-top: 10px;
+}
+
+div.wapper-content aside.profile span {
+  font-size: 14px;
+  color: #53626c;
+}
+
+div.wapper-content aside.profile p {
+  font-size: 14px;
+  color: #1f2226;
+  margin-top: 15px;
+}
+
+div.wapper-content aside.profile ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+div.wapper-content aside.profile ul.list li {
+  font-size: 14px;
+  color: #657786;
+
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* Apenas para dar um efeito no layout de link */
+div.wapper-content aside.profile ul.list li.color-blue {
+  color: #3bb9e3;
+  font-weight: bold;
+}
+
+/* Desativa no 1º elemento (li) */
+div.wapper-content aside.profile ul.list li:first-child {
+  margin: 0;
+}
+
+div.wapper-content aside.profile li img {
+  margin-right: 10px;
+}
+
+div.wapper-content aside.profile .widget strong {
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+div.wapper-content aside.profile .widget {
+  margin-top: 20px;
+}
+
+div.wapper-content aside.profile .widget strong img {
+  margin-right: 5px;
+}
+
+/* Followers */
+div.wapper-content aside.profile .followers ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Quebra a linha se preciso */
+}
+
+div.wapper-content aside.profile .followers ul li {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #c2c7ca;
+  flex-grow: 1; /* Oculpa o container inteiro */
+  margin: 0 5px 5px 0;
+}
+
+/* Images */
+div.wapper-content aside.profile .images ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Quebra a linha se preciso */
+}
+
+div.wapper-content aside.profile .images ul li {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background: #c2c7ca;
+  flex-grow: 1; /* Oculpa o container inteiro */
+  margin: 0 5px 5px 0;
+}
+
+/* Fim - Wapper-Content */
+
+/*-------------------------------------------------------------- */
